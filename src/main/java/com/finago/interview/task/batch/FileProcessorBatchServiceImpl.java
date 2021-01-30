@@ -1,9 +1,14 @@
 package com.finago.interview.task.batch;
 
+import com.finago.interview.task.model.Receiver;
+import com.finago.interview.task.model.Receivers;
+import com.finago.interview.task.util.AppUtil;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import javax.xml.bind.JAXBException;
 
 public class FileProcessorBatchServiceImpl implements FileProcessorBatchService {
 
@@ -20,4 +25,11 @@ public class FileProcessorBatchServiceImpl implements FileProcessorBatchService 
 		}
 		return false;
 	}
+
+	@Override
+	public Receivers getReceiverBlocks(String xmlFilename) throws JAXBException, FileNotFoundException {
+		return AppUtil.unmarshall(xmlFilename);
+	}
+
+
 }

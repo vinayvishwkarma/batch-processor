@@ -1,10 +1,8 @@
 package com.finago.interview.task;
 
-import com.finago.interview.task.model.Receiver;
-import com.finago.interview.task.model.Receivers;
 import com.finago.interview.task.util.AppUtil;
-import java.io.FileNotFoundException;
-import javax.xml.bind.JAXBException;
+import java.io.IOException;
+import java.nio.file.*;
 
 /**
  * A simple main method as an example.
@@ -12,13 +10,23 @@ import javax.xml.bind.JAXBException;
 
 public class BatchProcessor {
 
-    public static void main(String[] args) throws JAXBException, FileNotFoundException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         System.out.println("*beep boop* ...processing data... *beep boop*");
-        Receivers receivers = AppUtil.unmarshall();
-        for (Receiver receiver : receivers.getReceiver()) {
-            System.out.println(receiver);
-        }
 
+        WatchService watchService = FileSystems.getDefault().newWatchService();
+        Path inputDirectory = Path.of(AppUtil.getPath("in"));
+
+        inputDirectory.register(watchService, StandardWatchEventKinds.ENTRY_CREATE);
+
+        WatchKey key;
+
+        while ((key = watchService.take()) != null) {
+            for (WatchEvent<?> event : key.pollEvents()) {
+                System.out.println("Event kind " + event.kind() + ". File affected: " + event.context());
+                AppUtil.isXMLFileValid((String) event.context());
+            }
+            key.reset();
+        }
     }
 
 }

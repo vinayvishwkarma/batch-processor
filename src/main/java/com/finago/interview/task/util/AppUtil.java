@@ -16,15 +16,12 @@ import org.w3c.dom.Document;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
-public class AppUtil
-
-{
+public class AppUtil {
 	public static String getPath(String relativePath) throws IOException {
 
 		try (InputStream inputStream = Files.newInputStream(Paths.get("resources/common.properties"))) {
 
 			Properties prop = new Properties();
-
 			prop.load(inputStream);
 
 			if (relativePath.equals("in")) {
@@ -63,22 +60,19 @@ public class AppUtil
 	}
 
 	public static boolean isXMLFileValid(String xmlFile) throws IOException {
+		String source = getPath("in") + xmlFile;
 
-		String source =getPath("in") + xmlFile;
+		File fXmlFile = new File(source);
+		DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
+
 		try {
-			File fXmlFile = new File(source);
-			DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder documentBuilder = documentFactory.newDocumentBuilder();
-			Document document = documentBuilder.parse(fXmlFile);
+			documentBuilder.parse(fXmlFile);
 		} catch (Exception e) {
-			String target=getPath("error") + xmlFile;
- 			moveFile(source, target);
 			return false;
 		}
-
 		return true;
 	}
-
 
 	private static void moveFile(String src, String dest ) {
 	      Path result = null;
@@ -87,16 +81,17 @@ public class AppUtil
 	      } catch (IOException e) {
 	         System.out.println("Exception while moving file: " + e.getMessage());
 	      }
-	      if(result != null) {
+	      if (result != null) {
 	         System.out.println("File moved successfully.");
-	      }else{
+	      } else {
 	         System.out.println("File movement failed.");
 	      }
 	   }
 
-	public static Receivers unmarshall() throws JAXBException, FileNotFoundException {
+	public static Receivers unmarshall(String xmlFilename) throws JAXBException, FileNotFoundException {
 		JAXBContext context = JAXBContext.newInstance(Receivers.class);
-		return (Receivers) context.createUnmarshaller().unmarshal(new FileReader("data/in/90072701.xml"));
+		return (Receivers) context.createUnmarshaller()
+			.unmarshal(new FileReader("data/in/" + xmlFilename + ".xml"));
 	}
 
 }
