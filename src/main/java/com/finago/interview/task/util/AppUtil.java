@@ -1,19 +1,22 @@
 package com.finago.interview.task.util;
 
+import com.finago.interview.task.model.Receivers;
+import java.io.*;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 import java.security.NoSuchAlgorithmException;
 import java.util.Properties;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
 import org.w3c.dom.Document;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
-class AppUtil
+public class AppUtil
 
 {
 	public static String getPath(String relativePath) throws IOException {
@@ -76,7 +79,7 @@ class AppUtil
 		return true;
 	}
 
-	
+
 	private static void moveFile(String src, String dest ) {
 	      Path result = null;
 	      try {
@@ -90,5 +93,10 @@ class AppUtil
 	         System.out.println("File movement failed.");
 	      }
 	   }
+
+	public static Receivers unmarshall() throws JAXBException, FileNotFoundException {
+		JAXBContext context = JAXBContext.newInstance(Receivers.class);
+		return (Receivers) context.createUnmarshaller().unmarshal(new FileReader("data/in/90072701.xml"));
+	}
 
 }
