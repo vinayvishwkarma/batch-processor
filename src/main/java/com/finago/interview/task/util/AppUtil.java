@@ -1,8 +1,8 @@
 package com.finago.interview.task.util;
 
-import com.finago.interview.task.model.Receivers;
-import java.io.*;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -10,11 +10,14 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.security.NoSuchAlgorithmException;
 import java.util.Properties;
+
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
-import org.w3c.dom.Document;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+
+import com.finago.interview.task.batch.FileMovingMethodConstant;
+import com.finago.interview.task.model.Receivers;
 
 public class AppUtil {
 	public static String getPath(String relativePath) throws IOException {
@@ -24,16 +27,16 @@ public class AppUtil {
 			Properties prop = new Properties();
 			prop.load(inputStream);
 
-			if (relativePath.equals("in")) {
+			if (relativePath.equals(FileMovingMethodConstant.FILE_FOLDER_IN)) {
 				return prop.getProperty("data.in.folder");
 
-			} else if (relativePath.equals("out")) {
+			} else if (relativePath.equals(FileMovingMethodConstant.FILE_FOLDER_OUT)) {
 				return prop.getProperty("data.out.folder");
 
-			} else if (relativePath.equals("error")) {
+			} else if (relativePath.equals(FileMovingMethodConstant.FILE_FOLDER_ERROR)) {
 				return prop.getProperty("data.error.folder");
 
-			} else if (relativePath.equals("archive")) {
+			} else if (relativePath.equals(FileMovingMethodConstant.FILE_FOLDER_ARCHIVE)) {
 				return prop.getProperty("data.archive.folder");
 			}
 
@@ -42,20 +45,28 @@ public class AppUtil {
 		return null;
 	}
 
-	public static boolean isCorrupted(String fileName, String checksum) throws NoSuchAlgorithmException, IOException {
+	public static boolean isPdfCorrupted(String fileName, String checksum)
+			throws NoSuchAlgorithmException, IOException {
 
-		String path = getPath("in") + fileName;
+		String path = getPath(FileMovingMethodConstant.FILE_FOLDER_IN) + fileName;
 		String md5Checksum = null;
 
 		try (InputStream inputStream = Files.newInputStream(Paths.get(path))) {
-			md5Checksum = org.apache.commons.codec.digest.DigestUtils.md5Hex(inputStream);
+			if (inputStream != null) {
+				md5Checksum = org.apache.commons.codec.digest.DigestUtils.md5Hex(inputStream);
+			} else {
+				return false;
+			}
+		} catch (Exception e) {
+			return false;
+
 		}
 
 		if (md5Checksum.equals(checksum)) {
-			return false;
+			return true;
 		}
 
-		return true;
+		return false;
 
 	}
 
@@ -69,29 +80,34 @@ public class AppUtil {
 			DocumentBuilder documentBuilder = documentFactory.newDocumentBuilder();
 			documentBuilder.parse(fXmlFile);
 		} catch (Exception e) {
-			return false;
+ 			return false;
 		}
 		return true;
 	}
 
-	private static void moveFile(String src, String dest ) {
-	      Path result = null;
-	      try {
-	         result = Files.copy(Paths.get(src), Paths.get(dest));
-	      } catch (IOException e) {
-	         System.out.println("Exception while moving file: " + e.getMessage());
-	      }
-	      if (result != null) {
-	         System.out.println("File moved successfully.");
-	      } else {
-	         System.out.println("File movement failed.");
-	      }
-	   }
-
 	public static Receivers unmarshall(String xmlFilename) throws JAXBException, FileNotFoundException {
 		JAXBContext context = JAXBContext.newInstance(Receivers.class);
-		return (Receivers) context.createUnmarshaller()
-			.unmarshal(new FileReader("data/in/" + xmlFilename + ".xml"));
+		return (Receivers) context.createUnmarshaller().unmarshal(new FileReader("data/in/" + xmlFilename));
+	}
+
+	
+	public static String generateDirectory(int receiverID, String folder) throws IOException {
+
+		int mod = receiverID % 100;
+
+		String path = getPath(folder) + mod + "/" + receiverID + "/";
+		Path dire = Files.createDirectories(Paths.get(path));
+		System.out.println("generateDirectory path" + " " + dire);
+		return path;
+
+	}
+	
+	public static boolean isFile(String fileName) throws IOException {
+
+		String filePath = getPath(FileMovingMethodConstant.FILE_FOLDER_IN)+fileName;
+		File file = new File(filePath);
+		return (file.exists() && !file.isDirectory());
+		
 	}
 
 }

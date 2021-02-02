@@ -1,32 +1,20 @@
 package com.finago.interview.task;
 
-import com.finago.interview.task.util.AppUtil;
 import java.io.IOException;
-import java.nio.file.*;
+import java.security.NoSuchAlgorithmException;
 
-/**
- * A simple main method as an example.
- */
+import javax.xml.bind.JAXBException;
+
+import com.finago.interview.task.batch.BatchProcessorHelper;
 
 public class BatchProcessor {
 
-    public static void main(String[] args) throws IOException, InterruptedException {
-        System.out.println("*beep boop* ...processing data... *beep boop*");
+	public static void main(String[] args) throws NoSuchAlgorithmException, IOException, InterruptedException, JAXBException {
+		System.out.println("*beep boop* ...processing data... *beep boop*");
 
-        WatchService watchService = FileSystems.getDefault().newWatchService();
-        Path inputDirectory = Path.of(AppUtil.getPath("in"));
+		new BatchProcessorHelper().doWork();
+	}
 
-        inputDirectory.register(watchService, StandardWatchEventKinds.ENTRY_CREATE);
-
-        WatchKey key;
-
-        while ((key = watchService.take()) != null) {
-            for (WatchEvent<?> event : key.pollEvents()) {
-                System.out.println("Event kind " + event.kind() + ". File affected: " + event.context());
-                AppUtil.isXMLFileValid((String) event.context());
-            }
-            key.reset();
-        }
-    }
+	
 
 }

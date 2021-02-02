@@ -9,13 +9,7 @@
 	<version>1.0-SNAPSHOT</version>
 	<name>batch-processor</name>
 	<url>https://finago.com</url>
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.3.1.RELEASE</version>
-		<relativePath />
-	</parent>
-
+	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
