@@ -42,19 +42,20 @@ public class BatchProcessorHelper {
 						for (Receiver receiver : receivers.getReceiver()) {
 							if (AppUtil.isFile(receiver.getFileName())) {
 
-								if (AppUtil.isPdfCorrupted(receiver.getFileName(), receiver.getFileMD5Checksum())) {
-									FileProcessorBatchServiceImpl.moveFile(service, receiver,
-											FileMovingMethodConstant.FILE_FOLDER_IN,
-											FileMovingMethodConstant.FILE_FOLDER_ERROR);
+								if (!AppUtil.isPdfCorrupted(receiver.getFileName(), receiver.getFileMD5Checksum())) {
 
-									service.convertToXML(receiver, "error");
-
-								} else {
 									FileProcessorBatchServiceImpl.moveFile(service, receiver,
 											FileMovingMethodConstant.FILE_FOLDER_IN,
 											FileMovingMethodConstant.FILE_FOLDER_OUT);
 
 									service.convertToXML(receiver, "out");
+
+								} else {
+									FileProcessorBatchServiceImpl.moveFile(service, receiver,
+											FileMovingMethodConstant.FILE_FOLDER_IN,
+											FileMovingMethodConstant.FILE_FOLDER_ERROR);
+
+									service.convertToXML(receiver, "error");
 
 								}
 							} else {

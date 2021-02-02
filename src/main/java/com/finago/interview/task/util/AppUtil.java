@@ -20,8 +20,9 @@ import com.finago.interview.task.batch.FileMovingMethodConstant;
 import com.finago.interview.task.model.Receivers;
 
 public class AppUtil {
-	
+
 	static Logger logger = Logger.getLogger(AppUtil.class);
+
 	public static String getPath(String relativePath) throws IOException {
 
 		try (InputStream inputStream = Files.newInputStream(Paths.get("resources/common.properties"))) {
@@ -57,16 +58,16 @@ public class AppUtil {
 			if (inputStream != null) {
 				md5Checksum = org.apache.commons.codec.digest.DigestUtils.md5Hex(inputStream);
 			} else {
-				return false;
+				return true;
 			}
 		} catch (Exception e) {
 			logger.info(e.getMessage());
-			return false;
-		}
-		if (md5Checksum.equals(checksum)) {
 			return true;
 		}
-		return false;
+		if (md5Checksum.equals(checksum)) {
+			return false;
+		}
+		return true;
 
 	}
 
@@ -80,7 +81,7 @@ public class AppUtil {
 			DocumentBuilder documentBuilder = documentFactory.newDocumentBuilder();
 			documentBuilder.parse(fXmlFile);
 		} catch (Exception e) {
-			logger.info("Xml file"+xmlFile+" is invalid ", e);
+			logger.info("Xml file" + xmlFile + " is invalid ", e);
 			return false;
 		}
 		return true;
