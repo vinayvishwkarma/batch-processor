@@ -3,6 +3,8 @@ package com.finago.interview.task.batch;
 import java.io.File;
 import java.io.FileNotFoundException;
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -18,14 +20,15 @@ import com.finago.interview.task.util.AppUtil;
 
 public class FileProcessorBatchServiceImpl implements FileProcessorBatchService {
 
+	static Logger logger = Logger.getLogger(FileProcessorBatchServiceImpl.class);
+
 	@Override
 	public boolean copyFileFromSourceToTarget(String source, String target) {
 		Path result = null;
 		try {
 			result = Files.copy(Paths.get(source), Paths.get(target));
 		} catch (IOException e) {
-			System.out.println("Exception while moving file: " + e.getMessage());
-			e.printStackTrace();
+			logger.error("Exception while moving file: " + e.getMessage(), e);
 		}
 		if (result != null) {
 			return true;
@@ -45,8 +48,7 @@ public class FileProcessorBatchServiceImpl implements FileProcessorBatchService 
 		try {
 			result = Files.move(Paths.get(source), Paths.get(target));
 		} catch (IOException e) {
-			System.out.println("Exception while moving file: " + e.getMessage());
-			e.printStackTrace();
+			logger.error("Exception while moving file: ", e);
 		}
 		if (result != null) {
 			return true;
@@ -60,8 +62,7 @@ public class FileProcessorBatchServiceImpl implements FileProcessorBatchService 
 		try {
 			FileUtils.cleanDirectory(directory);
 		} catch (IOException e) {
-			System.out.println("file can be deleted " + e.getMessage());
-			e.printStackTrace();
+			logger.error("file can be deleted ", e);
 		}
 	}
 
@@ -90,15 +91,18 @@ public class FileProcessorBatchServiceImpl implements FileProcessorBatchService 
 	public void convertToXML(Receiver receiver, String folder) {
 		try {
 			JAXBContext context = JAXBContext.newInstance(Receiver.class);
+
 			Marshaller marshaller = context.createMarshaller();
+
 			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+
 			String outputFile = AppUtil.generateDirectory(receiver.getReceiver_id(), folder)
 					+ receiver.getFileName().substring(0, receiver.getFileName().indexOf(".")) + ".xml";
-			System.out.println("unmarshall " + outputFile);
+
 			marshaller.marshal(receiver, new File(outputFile));
+
 		} catch (Exception e) {
-			System.out.println("convertToXML failed " + e.getMessage());
-			e.printStackTrace();
+			logger.error("convertToXML failed ", e);
 		}
 	}
 

@@ -12,13 +12,16 @@ import java.security.NoSuchAlgorithmException;
 
 import javax.xml.bind.JAXBException;
 
+import org.apache.log4j.Logger;
+
 import com.finago.interview.task.model.Receiver;
 import com.finago.interview.task.model.Receivers;
 import com.finago.interview.task.util.AppUtil;
 
 public class BatchProcessorHelper {
 
- 
+	static Logger logger = Logger.getLogger(BatchProcessorHelper.class);
+
 	public boolean doWork() throws NoSuchAlgorithmException, IOException, InterruptedException, JAXBException {
 
 		WatchService watchService = FileSystems.getDefault().newWatchService();
@@ -32,7 +35,7 @@ public class BatchProcessorHelper {
 
 		while ((key = watchService.take()) != null) {
 			for (WatchEvent<?> event : key.pollEvents()) {
- 				String xmlFilename = event.context().toString();
+				String xmlFilename = event.context().toString();
 				if (xmlFilename.contains(".xml")) {
 					if (AppUtil.isXMLFileValid(xmlFilename)) {
 						Receivers receivers = AppUtil.unmarshall(xmlFilename);
@@ -43,19 +46,21 @@ public class BatchProcessorHelper {
 									FileProcessorBatchServiceImpl.moveFile(service, receiver,
 											FileMovingMethodConstant.FILE_FOLDER_IN,
 											FileMovingMethodConstant.FILE_FOLDER_ERROR);
-									service.convertToXML(receiver,"error");
+
+									service.convertToXML(receiver, "error");
 
 								} else {
 									FileProcessorBatchServiceImpl.moveFile(service, receiver,
 											FileMovingMethodConstant.FILE_FOLDER_IN,
 											FileMovingMethodConstant.FILE_FOLDER_OUT);
-									service.convertToXML(receiver,"out");
+
+									service.convertToXML(receiver, "out");
+
 								}
 							} else {
-								
-								service.convertToXML(receiver,"error");
 
-								System.out.println("File not prasent in folder :" + receiver.getFileName());
+								service.convertToXML(receiver, "error");
+
 							}
 						}
 
@@ -68,10 +73,11 @@ public class BatchProcessorHelper {
 					FileProcessorBatchServiceImpl.moveFile(service, xmlFilename,
 							FileMovingMethodConstant.FILE_FOLDER_IN, FileMovingMethodConstant.FILE_FOLDER_ARCHIVE,
 							FileMovingMethodConstant.FILE_MOVE);
-				}
- 			}
-			service.deletePdfFiles(new File(AppUtil.getPath(FileMovingMethodConstant.FILE_FOLDER_IN)));
 
+				}
+			}
+			service.deletePdfFiles(new File(AppUtil.getPath(FileMovingMethodConstant.FILE_FOLDER_IN)));
+			logger.info("pdf Files are deleted from in folder");
 			key.reset();
 		}
 

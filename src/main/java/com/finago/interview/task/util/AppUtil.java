@@ -6,10 +6,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.security.NoSuchAlgorithmException;
 import java.util.Properties;
+import org.apache.log4j.Logger;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -20,6 +20,8 @@ import com.finago.interview.task.batch.FileMovingMethodConstant;
 import com.finago.interview.task.model.Receivers;
 
 public class AppUtil {
+	
+	static Logger logger = Logger.getLogger(AppUtil.class);
 	public static String getPath(String relativePath) throws IOException {
 
 		try (InputStream inputStream = Files.newInputStream(Paths.get("resources/common.properties"))) {
@@ -58,14 +60,12 @@ public class AppUtil {
 				return false;
 			}
 		} catch (Exception e) {
+			logger.info(e.getMessage());
 			return false;
-
 		}
-
 		if (md5Checksum.equals(checksum)) {
 			return true;
 		}
-
 		return false;
 
 	}
@@ -80,7 +80,8 @@ public class AppUtil {
 			DocumentBuilder documentBuilder = documentFactory.newDocumentBuilder();
 			documentBuilder.parse(fXmlFile);
 		} catch (Exception e) {
- 			return false;
+			logger.info("Xml file"+xmlFile+" is invalid ", e);
+			return false;
 		}
 		return true;
 	}
@@ -90,24 +91,21 @@ public class AppUtil {
 		return (Receivers) context.createUnmarshaller().unmarshal(new FileReader("data/in/" + xmlFilename));
 	}
 
-	
 	public static String generateDirectory(int receiverID, String folder) throws IOException {
 
 		int mod = receiverID % 100;
-
 		String path = getPath(folder) + mod + "/" + receiverID + "/";
-		Path dire = Files.createDirectories(Paths.get(path));
-		System.out.println("generateDirectory path" + " " + dire);
+		Files.createDirectories(Paths.get(path));
 		return path;
 
 	}
-	
+
 	public static boolean isFile(String fileName) throws IOException {
 
-		String filePath = getPath(FileMovingMethodConstant.FILE_FOLDER_IN)+fileName;
+		String filePath = getPath(FileMovingMethodConstant.FILE_FOLDER_IN) + fileName;
 		File file = new File(filePath);
 		return (file.exists() && !file.isDirectory());
-		
+
 	}
 
 }
