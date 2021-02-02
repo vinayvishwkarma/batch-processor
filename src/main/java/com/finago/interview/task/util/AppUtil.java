@@ -1,24 +1,16 @@
 package com.finago.interview.task.util;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.security.NoSuchAlgorithmException;
 import java.util.Properties;
-
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import org.apache.log4j.Logger;
-
-import com.finago.interview.task.batch.FileMovingMethodConstant;
-import com.finago.interview.task.model.Receivers;
+import com.finago.interview.task.batch.constant.FileConstant;
 
 public class AppUtil {
 
@@ -28,20 +20,20 @@ public class AppUtil {
 
 		try (InputStream inputStream = Files.newInputStream(Paths.get("resources/common.properties"))) {
 
-			Properties prop = new Properties();
-			prop.load(inputStream);
+			Properties property = new Properties();
+			property.load(inputStream);
 
-			if (relativePath.equals(FileMovingMethodConstant.FILE_FOLDER_IN)) {
-				return prop.getProperty("data.in.folder");
+			if (relativePath.equals(FileConstant.FILE_FOLDER_IN)) {
+				return property.getProperty("data.in.folder");
 
-			} else if (relativePath.equals(FileMovingMethodConstant.FILE_FOLDER_OUT)) {
-				return prop.getProperty("data.out.folder");
+			} else if (relativePath.equals(FileConstant.FILE_FOLDER_OUT)) {
+				return property.getProperty("data.out.folder");
 
-			} else if (relativePath.equals(FileMovingMethodConstant.FILE_FOLDER_ERROR)) {
-				return prop.getProperty("data.error.folder");
+			} else if (relativePath.equals(FileConstant.FILE_FOLDER_ERROR)) {
+				return property.getProperty("data.error.folder");
 
-			} else if (relativePath.equals(FileMovingMethodConstant.FILE_FOLDER_ARCHIVE)) {
-				return prop.getProperty("data.archive.folder");
+			} else if (relativePath.equals(FileConstant.FILE_FOLDER_ARCHIVE)) {
+				return property.getProperty("data.archive.folder");
 			}
 
 		}
@@ -52,7 +44,7 @@ public class AppUtil {
 	public static boolean isPdfCorrupted(String fileName, String checksum)
 			throws NoSuchAlgorithmException, IOException {
 
-		String path = getPath(FileMovingMethodConstant.FILE_FOLDER_IN) + fileName;
+		String path = getPath(FileConstant.FILE_FOLDER_IN) + fileName;
 		String md5Checksum = null;
 
 		try (InputStream inputStream = Files.newInputStream(Paths.get(path))) {
@@ -88,12 +80,7 @@ public class AppUtil {
 		return true;
 	}
 
-	public static Receivers unmarshall(String xmlFilename) throws JAXBException, FileNotFoundException {
-		JAXBContext context = JAXBContext.newInstance(Receivers.class);
-		return (Receivers) context.createUnmarshaller().unmarshal(new FileReader("data/in/" + xmlFilename));
-	}
-
-	public static String generateDirectory(int receiverID, String folder) throws IOException {
+	public static String makeDirectory(int receiverID, String folder) throws IOException {
 
 		int mod = receiverID % 100;
 		String path = getPath(folder) + mod + "/" + receiverID + "/";
@@ -104,7 +91,7 @@ public class AppUtil {
 
 	public static boolean isFile(String fileName) throws IOException {
 
-		String filePath = getPath(FileMovingMethodConstant.FILE_FOLDER_IN) + fileName;
+		String filePath = getPath(FileConstant.FILE_FOLDER_IN) + fileName;
 		File file = new File(filePath);
 		return (file.exists() && !file.isDirectory());
 

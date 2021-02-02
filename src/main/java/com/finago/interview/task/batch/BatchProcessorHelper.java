@@ -14,6 +14,7 @@ import javax.xml.bind.JAXBException;
 
 import org.apache.log4j.Logger;
 
+import com.finago.interview.task.batch.constant.FileConstant;
 import com.finago.interview.task.model.Receiver;
 import com.finago.interview.task.model.Receivers;
 import com.finago.interview.task.util.AppUtil;
@@ -25,7 +26,7 @@ public class BatchProcessorHelper {
 	public boolean doWork() throws NoSuchAlgorithmException, IOException, InterruptedException, JAXBException {
 
 		WatchService watchService = FileSystems.getDefault().newWatchService();
-		Path inputDirectory = Path.of(AppUtil.getPath(FileMovingMethodConstant.FILE_FOLDER_IN));
+		Path inputDirectory = Path.of(AppUtil.getPath(FileConstant.FILE_FOLDER_IN));
 
 		FileProcessorBatchService service = new FileProcessorBatchServiceImpl();
 
@@ -38,46 +39,42 @@ public class BatchProcessorHelper {
 				String xmlFilename = event.context().toString();
 				if (xmlFilename.contains(".xml")) {
 					if (AppUtil.isXMLFileValid(xmlFilename)) {
-						Receivers receivers = AppUtil.unmarshall(xmlFilename);
+						Receivers receivers = service.getReceivers(xmlFilename);
 						for (Receiver receiver : receivers.getReceiver()) {
 							if (AppUtil.isFile(receiver.getFileName())) {
 
 								if (!AppUtil.isPdfCorrupted(receiver.getFileName(), receiver.getFileMD5Checksum())) {
 
-									FileProcessorBatchServiceImpl.moveFile(service, receiver,
-											FileMovingMethodConstant.FILE_FOLDER_IN,
-											FileMovingMethodConstant.FILE_FOLDER_OUT);
+									service.moveFile(service, receiver, FileConstant.FILE_FOLDER_IN,
+											FileConstant.FILE_FOLDER_OUT);
 
-									service.convertToXML(receiver, "out");
+									service.createXMLFile(receiver, FileConstant.FILE_FOLDER_OUT);
 
 								} else {
-									FileProcessorBatchServiceImpl.moveFile(service, receiver,
-											FileMovingMethodConstant.FILE_FOLDER_IN,
-											FileMovingMethodConstant.FILE_FOLDER_ERROR);
+									service.moveFile(service, receiver, FileConstant.FILE_FOLDER_IN,
+											FileConstant.FILE_FOLDER_ERROR);
 
-									service.convertToXML(receiver, "error");
+									service.createXMLFile(receiver, FileConstant.FILE_FOLDER_ERROR);
 
 								}
 							} else {
 
-								service.convertToXML(receiver, "error");
+								service.createXMLFile(receiver, FileConstant.FILE_FOLDER_ERROR);
 
 							}
 						}
 
 					} else {
-						FileProcessorBatchServiceImpl.moveFile(service, xmlFilename,
-								FileMovingMethodConstant.FILE_FOLDER_IN, FileMovingMethodConstant.FILE_FOLDER_ERROR,
-								FileMovingMethodConstant.FILE_MOVE);
+						service.moveFile(service, xmlFilename, FileConstant.FILE_FOLDER_IN,
+								FileConstant.FILE_FOLDER_ERROR, FileConstant.FILE_MOVE);
 					}
 
-					FileProcessorBatchServiceImpl.moveFile(service, xmlFilename,
-							FileMovingMethodConstant.FILE_FOLDER_IN, FileMovingMethodConstant.FILE_FOLDER_ARCHIVE,
-							FileMovingMethodConstant.FILE_MOVE);
+					service.moveFile(service, xmlFilename, FileConstant.FILE_FOLDER_IN,
+							FileConstant.FILE_FOLDER_ARCHIVE, FileConstant.FILE_MOVE);
 
 				}
 			}
-			service.deletePdfFiles(new File(AppUtil.getPath(FileMovingMethodConstant.FILE_FOLDER_IN)));
+			service.deletePdfFiles(new File(AppUtil.getPath(FileConstant.FILE_FOLDER_IN)));
 			logger.info("pdf Files are deleted from in folder");
 			key.reset();
 		}

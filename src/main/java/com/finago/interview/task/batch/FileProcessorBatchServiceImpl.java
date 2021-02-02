@@ -2,6 +2,8 @@ package com.finago.interview.task.batch;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 
@@ -14,6 +16,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
+import com.finago.interview.task.batch.constant.FileConstant;
 import com.finago.interview.task.model.Receiver;
 import com.finago.interview.task.model.Receivers;
 import com.finago.interview.task.util.AppUtil;
@@ -37,8 +40,9 @@ public class FileProcessorBatchServiceImpl implements FileProcessorBatchService 
 	}
 
 	@Override
-	public Receivers getReceiverBlocks(String xmlFilename) throws JAXBException, FileNotFoundException {
-		return AppUtil.unmarshall(xmlFilename);
+	public Receivers getReceivers(String xmlFilename) throws JAXBException, FileNotFoundException {
+		JAXBContext context = JAXBContext.newInstance(Receivers.class);
+		return (Receivers) context.createUnmarshaller().unmarshal(new FileReader("data/in/" + xmlFilename));
 	}
 
 	@Override
@@ -66,29 +70,31 @@ public class FileProcessorBatchServiceImpl implements FileProcessorBatchService 
 		}
 	}
 
-	public static void moveFile(FileProcessorBatchService service, Receiver receiver, String sourceDirectory,
+	@Override
+	public void moveFile(FileProcessorBatchService service, Receiver receiver, String sourceDirectory,
 			String targetDirectory) throws IOException {
 		String source = AppUtil.getPath(sourceDirectory) + receiver.getFileName();
-		String target = AppUtil.generateDirectory(receiver.getReceiver_id(), targetDirectory) + receiver.getFileName();
+		String target = AppUtil.makeDirectory(receiver.getReceiver_id(), targetDirectory) + receiver.getFileName();
 		service.copyFileFromSourceToTarget(source, target);
 	}
 
-	public static void moveFile(FileProcessorBatchService service, String xmlFilename, String sourceDirectory,
+	@Override
+	public void moveFile(FileProcessorBatchService service, String xmlFilename, String sourceDirectory,
 			String targetDirectory, String method) throws IOException {
 
 		String source = AppUtil.getPath(sourceDirectory) + xmlFilename;
 		String target = AppUtil.getPath(targetDirectory) + xmlFilename;
 
-		if (method.equalsIgnoreCase(FileMovingMethodConstant.FILE_MOVE)) {
+		if (method.equalsIgnoreCase(FileConstant.FILE_MOVE)) {
 			service.moveFileSourceToTarget(source, target);
-		} else if (method.equalsIgnoreCase(FileMovingMethodConstant.FILE_COPY)) {
+		} else if (method.equalsIgnoreCase(FileConstant.FILE_COPY)) {
 			service.copyFileFromSourceToTarget(source, target);
 
 		}
 	}
 
 	@Override
-	public void convertToXML(Receiver receiver, String folder) {
+	public void createXMLFile(Receiver receiver, String folder) {
 		try {
 			JAXBContext context = JAXBContext.newInstance(Receiver.class);
 
@@ -96,7 +102,7 @@ public class FileProcessorBatchServiceImpl implements FileProcessorBatchService 
 
 			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
-			String outputFile = AppUtil.generateDirectory(receiver.getReceiver_id(), folder)
+			String outputFile = AppUtil.makeDirectory(receiver.getReceiver_id(), folder)
 					+ receiver.getFileName().substring(0, receiver.getFileName().indexOf(".")) + ".xml";
 
 			marshaller.marshal(receiver, new File(outputFile));

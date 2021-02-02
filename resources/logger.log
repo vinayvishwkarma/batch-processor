@@ -155,3 +155,66 @@ java.nio.file.NoSuchFileException: data/in/220019915.xml
 	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:74)
 	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
 2021-02-02 16:35:45 INFO  BatchProcessorHelper:81 - pdf Files are deleted from in folder
+2021-02-02 21:36:56 INFO  AppUtil:85 - Xml file220019915.xml is invalid 
+org.xml.sax.SAXParseException; systemId: file:/Users/jarvis/Downloads/batch-processor/data/in/220019915.xml; lineNumber: 9; columnNumber: 16; XML document structures must start and end within the same entity.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:261)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isXMLFileValid(AppUtil.java:83)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:40)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
+2021-02-02 21:36:56 ERROR FileProcessorBatchServiceImpl:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFileSourceToTarget(FileProcessorBatchServiceImpl.java:52)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:88)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:71)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
+2021-02-02 21:36:56 INFO  BatchProcessorHelper:77 - pdf Files are deleted from in folder
+2021-02-02 21:38:16 INFO  AppUtil:85 - Xml file220019915.xml is invalid 
+org.xml.sax.SAXParseException; systemId: file:/Users/jarvis/Downloads/batch-processor/data/in/220019915.xml; lineNumber: 9; columnNumber: 16; XML document structures must start and end within the same entity.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:261)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isXMLFileValid(AppUtil.java:83)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:40)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
+2021-02-02 21:38:16 ERROR FileProcessorBatchServiceImpl:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFileSourceToTarget(FileProcessorBatchServiceImpl.java:52)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:88)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:71)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
+2021-02-02 21:38:16 INFO  BatchProcessorHelper:77 - pdf Files are deleted from in folder
+2021-02-02 21:54:58 INFO  AppUtil:80 - Xml file220019915.xml is invalid 
+org.xml.sax.SAXParseException; systemId: file:/Users/jarvis/Downloads/batch-processor/data/in/220019915.xml; lineNumber: 9; columnNumber: 16; XML document structures must start and end within the same entity.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:261)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isXMLFileValid(AppUtil.java:78)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:41)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
+2021-02-02 21:54:58 ERROR FileProcessorBatchServiceImpl:55 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFileSourceToTarget(FileProcessorBatchServiceImpl.java:53)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:89)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:72)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
+2021-02-02 21:54:58 INFO  BatchProcessorHelper:78 - pdf Files are deleted from in folder
