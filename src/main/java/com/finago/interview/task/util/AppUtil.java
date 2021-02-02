@@ -9,12 +9,13 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.security.NoSuchAlgorithmException;
 import java.util.Properties;
-import org.apache.log4j.Logger;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.apache.log4j.Logger;
 
 import com.finago.interview.task.batch.FileMovingMethodConstant;
 import com.finago.interview.task.model.Receivers;
