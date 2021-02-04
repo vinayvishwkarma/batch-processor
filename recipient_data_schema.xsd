@@ -1,21 +1,22 @@
 <?xml version="1.0" ?>
 
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="receivers">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="receiver" type="receiver_type" minOccurs="0" maxOccurs="unbounded" />
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
+<xsd:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="receivers">
+        
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="receiver" type="receiver_type" minOccurs="0" maxOccurs="unbounded" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
 
-    <xs:complexType name="receiver_type">
-        <xs:sequence>
-            <xs:element name="receiver_id" type="xs:positiveInteger" />
-            <xs:element name="first_name" type="xs:string" />
-            <xs:element name="last_name" type="xs:string" />
-            <xs:element name="file" type="xs:string" />
-            <xs:element name="file_md5" type="xs:string" />
-        </xs:sequence>
-    </xs:complexType>
-</xs:schema>
+    <xsd:complexType name="receiver_type">
+        <xsd:sequence>
+            <xsd:element name="receiver_id" type="xs:positiveInteger" />
+            <xsd:element name="first_name" type="xs:string" />
+            <xsd:element name="last_name" type="xs:string" />
+            <xsd:element name="file" type="xs:string" />
+            <xsd:element name="file_md5" type="xs:string" />
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

@@ -3,10 +3,6 @@ package com.finago.interview.task.batch;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-
-import org.apache.commons.io.FileUtils;
-import org.apache.log4j.Logger;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -16,17 +12,19 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
-import com.finago.interview.task.batch.constant.FileConstant;
+import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
+
+import com.finago.interview.task.constant.FileConstant;
 import com.finago.interview.task.model.Receiver;
 import com.finago.interview.task.model.Receivers;
 import com.finago.interview.task.util.AppUtil;
 
-public class FileProcessorBatchServiceImpl implements FileProcessorBatchService {
+public class BatchUtil {
 
-	static Logger logger = Logger.getLogger(FileProcessorBatchServiceImpl.class);
+	static Logger logger = Logger.getLogger(BatchUtil.class);
 
-	@Override
-	public boolean copyFileFromSourceToTarget(String source, String target) {
+	public static boolean copyFileFromSourceToTarget(String source, String target) {
 		Path result = null;
 		try {
 			result = Files.copy(Paths.get(source), Paths.get(target));
@@ -39,14 +37,12 @@ public class FileProcessorBatchServiceImpl implements FileProcessorBatchService 
 		return false;
 	}
 
-	@Override
-	public Receivers getReceivers(String xmlFilename) throws JAXBException, FileNotFoundException {
+	public static Receivers getReceivers(String xmlFilename) throws JAXBException, FileNotFoundException {
 		JAXBContext context = JAXBContext.newInstance(Receivers.class);
 		return (Receivers) context.createUnmarshaller().unmarshal(new FileReader("data/in/" + xmlFilename));
 	}
 
-	@Override
-	public boolean moveFileSourceToTarget(String source, String target) {
+	public static boolean moveFileSourceToTarget(String source, String target) {
 		Path result = null;
 
 		try {
@@ -61,8 +57,7 @@ public class FileProcessorBatchServiceImpl implements FileProcessorBatchService 
 
 	}
 
-	@Override
-	public void deletePdfFiles(File directory) {
+	public static void deletePdfFiles(File directory) {
 		try {
 			FileUtils.cleanDirectory(directory);
 		} catch (IOException e) {
@@ -70,31 +65,27 @@ public class FileProcessorBatchServiceImpl implements FileProcessorBatchService 
 		}
 	}
 
-	@Override
-	public void moveFile(FileProcessorBatchService service, Receiver receiver, String sourceDirectory,
-			String targetDirectory) throws IOException {
+	public static void moveFile(Receiver receiver, String sourceDirectory, String targetDirectory) throws IOException {
 		String source = AppUtil.getPath(sourceDirectory) + receiver.getFileName();
 		String target = AppUtil.makeDirectory(receiver.getReceiver_id(), targetDirectory) + receiver.getFileName();
-		service.copyFileFromSourceToTarget(source, target);
+		copyFileFromSourceToTarget(source, target);
 	}
 
-	@Override
-	public void moveFile(FileProcessorBatchService service, String xmlFilename, String sourceDirectory,
-			String targetDirectory, String method) throws IOException {
+	public static void moveFile(String xmlFilename, String sourceDirectory, String targetDirectory, String method)
+			throws IOException {
 
 		String source = AppUtil.getPath(sourceDirectory) + xmlFilename;
 		String target = AppUtil.getPath(targetDirectory) + xmlFilename;
 
 		if (method.equalsIgnoreCase(FileConstant.FILE_MOVE)) {
-			service.moveFileSourceToTarget(source, target);
+			moveFileSourceToTarget(source, target);
 		} else if (method.equalsIgnoreCase(FileConstant.FILE_COPY)) {
-			service.copyFileFromSourceToTarget(source, target);
+			copyFileFromSourceToTarget(source, target);
 
 		}
 	}
 
-	@Override
-	public void createXMLFile(Receiver receiver, String folder) {
+	public static void createXMLFile(Receiver receiver, String folder) {
 		try {
 			JAXBContext context = JAXBContext.newInstance(Receiver.class);
 

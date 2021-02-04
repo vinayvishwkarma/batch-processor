@@ -6,11 +6,14 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.security.NoSuchAlgorithmException;
-import java.util.Properties;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+
 import org.apache.log4j.Logger;
-import com.finago.interview.task.batch.constant.FileConstant;
+
+import com.finago.interview.task.constant.FileConstant;
+import com.finago.interview.task.constant.FilePathConstant;
 
 public class AppUtil {
 
@@ -18,24 +21,17 @@ public class AppUtil {
 
 	public static String getPath(String relativePath) throws IOException {
 
-		try (InputStream inputStream = Files.newInputStream(Paths.get("resources/common.properties"))) {
+		if (relativePath.equals(FileConstant.FILE_FOLDER_IN)) {
+			return FilePathConstant.DATA_IN_FOLDER;
 
-			Properties property = new Properties();
-			property.load(inputStream);
+		} else if (relativePath.equals(FileConstant.FILE_FOLDER_OUT)) {
+			return FilePathConstant.DATA_OUT_FOLDER;
 
-			if (relativePath.equals(FileConstant.FILE_FOLDER_IN)) {
-				return property.getProperty("data.in.folder");
+		} else if (relativePath.equals(FileConstant.FILE_FOLDER_ERROR)) {
+			return FilePathConstant.DATA_ERROR_FOLDER;
 
-			} else if (relativePath.equals(FileConstant.FILE_FOLDER_OUT)) {
-				return property.getProperty("data.out.folder");
-
-			} else if (relativePath.equals(FileConstant.FILE_FOLDER_ERROR)) {
-				return property.getProperty("data.error.folder");
-
-			} else if (relativePath.equals(FileConstant.FILE_FOLDER_ARCHIVE)) {
-				return property.getProperty("data.archive.folder");
-			}
-
+		} else if (relativePath.equals(FileConstant.FILE_FOLDER_ARCHIVE)) {
+			return FilePathConstant.DATA_ARCHIVE_FOLDER;
 		}
 
 		return null;
@@ -44,7 +40,8 @@ public class AppUtil {
 	public static boolean isPdfCorrupted(String fileName, String checksum)
 			throws NoSuchAlgorithmException, IOException {
 
-		String path = getPath(FileConstant.FILE_FOLDER_IN) + fileName;
+		String path = FilePathConstant.DATA_IN_FOLDER + fileName;
+
 		String md5Checksum = null;
 
 		try (InputStream inputStream = Files.newInputStream(Paths.get(path))) {
@@ -64,8 +61,8 @@ public class AppUtil {
 
 	}
 
-	public static boolean isXMLFileValid(String xmlFile) throws IOException {
-		String source = getPath("in") + xmlFile;
+	public static boolean isValidXML(String xmlFile) throws IOException {
+		String source = FilePathConstant.DATA_IN_FOLDER + xmlFile;
 
 		File fXmlFile = new File(source);
 		DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
@@ -91,7 +88,7 @@ public class AppUtil {
 
 	public static boolean isFile(String fileName) throws IOException {
 
-		String filePath = getPath(FileConstant.FILE_FOLDER_IN) + fileName;
+		String filePath = FilePathConstant.DATA_IN_FOLDER + fileName;
 		File file = new File(filePath);
 		return (file.exists() && !file.isDirectory());
 

@@ -1,4 +1,4 @@
-package com.finago.interview.task.batch.constant;
+package com.finago.interview.task.constant;
 
 public class FileConstant {
 

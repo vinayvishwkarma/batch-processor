@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<receiver>
+    <receiver_id>11520</receiver_id>
+    <first_name>Jane</first_name>
+    <last_name>Smith</last_name>
+    <file>110011004.pdf</file>
+    <file_md5>b93781412387b87d5a3526d0575178a1</file_md5>
+</receiver>

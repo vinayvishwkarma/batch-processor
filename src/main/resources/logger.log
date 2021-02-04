@@ -1,0 +1,1147 @@
+2021-02-02 16:01:57 INFO  BatchProcessorHelper:61 - File not prasent in folder :110011016.pdf
+2021-02-02 16:01:57 INFO  BatchProcessorHelper:61 - File not prasent in folder :110011026.pdf
+2021-02-02 16:01:57 INFO  AppUtil:83 - Xml file is invalid XML document structures must start and end within the same entity.
+org.xml.sax.SAXParseException; systemId: file:/Users/jarvis/Downloads/batch-processor/data/in/220019915.xml; lineNumber: 9; columnNumber: 16; XML document structures must start and end within the same entity.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:261)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isXMLFileValid(AppUtil.java:81)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:40)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
+2021-02-02 16:01:57 ERROR FileProcessorBatchServiceImpl:51 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFileSourceToTarget(FileProcessorBatchServiceImpl.java:49)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:83)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:71)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
+2021-02-02 16:01:57 INFO  BatchProcessorHelper:77 - pdf Files are deleted from in folder
+2021-02-02 16:07:19 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/42/8842/90072657.xml
+2021-02-02 16:07:19 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/20/11520/90072657.xml
+2021-02-02 16:07:19 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/42/8842/90072658.xml
+2021-02-02 16:07:19 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/out/94/142994/90072659.xml
+2021-02-02 16:07:19 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/51/51/90072610.xml
+2021-02-02 16:07:19 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/69/753469/110011003.xml
+2021-02-02 16:07:20 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/20/11520/110011004.xml
+2021-02-02 16:07:20 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/47/92247/110011005.xml
+2021-02-02 16:07:20 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/78/91178/110011006.xml
+2021-02-02 16:07:20 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/9/9/110011009.xml
+2021-02-02 16:07:20 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/67/11267/110011014.xml
+2021-02-02 16:07:20 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/51/51/110011015.xml
+2021-02-02 16:07:20 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/12/67112/110011015.xml
+2021-02-02 16:07:20 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/34/810034/110011015.xml
+2021-02-02 16:07:20 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/99/999/110011016.xml
+2021-02-02 16:07:20 INFO  BatchProcessorHelper:61 - File not prasent in folder :110011016.pdf
+2021-02-02 16:07:20 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/13/667013/110011026.xml
+2021-02-02 16:07:20 INFO  BatchProcessorHelper:61 - File not prasent in folder :110011026.pdf
+2021-02-02 16:07:20 INFO  AppUtil:83 - Xml file is invalid XML document structures must start and end within the same entity.
+org.xml.sax.SAXParseException; systemId: file:/Users/jarvis/Downloads/batch-processor/data/in/220019915.xml; lineNumber: 9; columnNumber: 16; XML document structures must start and end within the same entity.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:261)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isXMLFileValid(AppUtil.java:81)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:40)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
+2021-02-02 16:07:20 ERROR FileProcessorBatchServiceImpl:51 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFileSourceToTarget(FileProcessorBatchServiceImpl.java:49)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:83)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:71)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
+2021-02-02 16:07:20 INFO  BatchProcessorHelper:77 - pdf Files are deleted from in folder
+2021-02-02 16:19:40 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/42/8842/90072657.xml
+2021-02-02 16:19:40 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/20/11520/90072657.xml
+2021-02-02 16:19:40 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/42/8842/90072658.xml
+2021-02-02 16:19:40 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/out/94/142994/90072659.xml
+2021-02-02 16:19:40 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/51/51/90072610.xml
+2021-02-02 16:19:40 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/69/753469/110011003.xml
+2021-02-02 16:19:40 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/20/11520/110011004.xml
+2021-02-02 16:19:40 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/47/92247/110011005.xml
+2021-02-02 16:19:40 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/78/91178/110011006.xml
+2021-02-02 16:19:40 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/9/9/110011009.xml
+2021-02-02 16:19:40 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/67/11267/110011014.xml
+2021-02-02 16:19:40 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/51/51/110011015.xml
+2021-02-02 16:19:40 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/12/67112/110011015.xml
+2021-02-02 16:19:40 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/34/810034/110011015.xml
+2021-02-02 16:19:40 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/99/999/110011016.xml
+2021-02-02 16:19:40 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/13/667013/110011026.xml
+2021-02-02 16:19:40 INFO  AppUtil:83 - Xml file220019915.xml is invalid 
+org.xml.sax.SAXParseException; systemId: file:/Users/jarvis/Downloads/batch-processor/data/in/220019915.xml; lineNumber: 9; columnNumber: 16; XML document structures must start and end within the same entity.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:261)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isXMLFileValid(AppUtil.java:81)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:40)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
+2021-02-02 16:19:40 ERROR FileProcessorBatchServiceImpl:51 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFileSourceToTarget(FileProcessorBatchServiceImpl.java:49)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:83)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:73)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
+2021-02-02 16:19:40 INFO  BatchProcessorHelper:80 - pdf Files are deleted from in folder
+2021-02-02 16:20:10 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/42/8842/90072657.xml
+2021-02-02 16:20:10 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/20/11520/90072657.xml
+2021-02-02 16:20:10 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/42/8842/90072658.xml
+2021-02-02 16:20:10 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/out/94/142994/90072659.xml
+2021-02-02 16:20:10 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/51/51/90072610.xml
+2021-02-02 16:20:10 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/69/753469/110011003.xml
+2021-02-02 16:20:10 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/20/11520/110011004.xml
+2021-02-02 16:20:10 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/47/92247/110011005.xml
+2021-02-02 16:20:10 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/78/91178/110011006.xml
+2021-02-02 16:20:10 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/9/9/110011009.xml
+2021-02-02 16:20:10 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/67/11267/110011014.xml
+2021-02-02 16:20:10 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/51/51/110011015.xml
+2021-02-02 16:20:10 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/12/67112/110011015.xml
+2021-02-02 16:20:10 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/34/810034/110011015.xml
+2021-02-02 16:20:10 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/99/999/110011016.xml
+2021-02-02 16:20:10 INFO  FileProcessorBatchServiceImpl:98 - unmarshall data/error/13/667013/110011026.xml
+2021-02-02 16:20:10 INFO  AppUtil:83 - Xml file220019915.xml is invalid 
+org.xml.sax.SAXParseException; systemId: file:/Users/jarvis/Downloads/batch-processor/data/in/220019915.xml; lineNumber: 9; columnNumber: 16; XML document structures must start and end within the same entity.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:261)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isXMLFileValid(AppUtil.java:81)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:40)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
+2021-02-02 16:20:10 ERROR FileProcessorBatchServiceImpl:51 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFileSourceToTarget(FileProcessorBatchServiceImpl.java:49)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:83)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:73)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
+2021-02-02 16:20:10 INFO  BatchProcessorHelper:80 - pdf Files are deleted from in folder
+2021-02-02 16:35:45 INFO  AppUtil:84 - Xml file220019915.xml is invalid 
+org.xml.sax.SAXParseException; systemId: file:/Users/jarvis/Downloads/batch-processor/data/in/220019915.xml; lineNumber: 9; columnNumber: 16; XML document structures must start and end within the same entity.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:261)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isXMLFileValid(AppUtil.java:82)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:40)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
+2021-02-02 16:35:45 ERROR FileProcessorBatchServiceImpl:51 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFileSourceToTarget(FileProcessorBatchServiceImpl.java:49)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:83)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:74)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
+2021-02-02 16:35:45 INFO  BatchProcessorHelper:81 - pdf Files are deleted from in folder
+2021-02-02 21:36:56 INFO  AppUtil:85 - Xml file220019915.xml is invalid 
+org.xml.sax.SAXParseException; systemId: file:/Users/jarvis/Downloads/batch-processor/data/in/220019915.xml; lineNumber: 9; columnNumber: 16; XML document structures must start and end within the same entity.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:261)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isXMLFileValid(AppUtil.java:83)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:40)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
+2021-02-02 21:36:56 ERROR FileProcessorBatchServiceImpl:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFileSourceToTarget(FileProcessorBatchServiceImpl.java:52)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:88)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:71)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
+2021-02-02 21:36:56 INFO  BatchProcessorHelper:77 - pdf Files are deleted from in folder
+2021-02-02 21:38:16 INFO  AppUtil:85 - Xml file220019915.xml is invalid 
+org.xml.sax.SAXParseException; systemId: file:/Users/jarvis/Downloads/batch-processor/data/in/220019915.xml; lineNumber: 9; columnNumber: 16; XML document structures must start and end within the same entity.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:261)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isXMLFileValid(AppUtil.java:83)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:40)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
+2021-02-02 21:38:16 ERROR FileProcessorBatchServiceImpl:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFileSourceToTarget(FileProcessorBatchServiceImpl.java:52)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:88)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:71)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
+2021-02-02 21:38:16 INFO  BatchProcessorHelper:77 - pdf Files are deleted from in folder
+2021-02-02 21:54:58 INFO  AppUtil:80 - Xml file220019915.xml is invalid 
+org.xml.sax.SAXParseException; systemId: file:/Users/jarvis/Downloads/batch-processor/data/in/220019915.xml; lineNumber: 9; columnNumber: 16; XML document structures must start and end within the same entity.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:261)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isXMLFileValid(AppUtil.java:78)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:41)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
+2021-02-02 21:54:58 ERROR FileProcessorBatchServiceImpl:55 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFileSourceToTarget(FileProcessorBatchServiceImpl.java:53)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:89)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:72)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
+2021-02-02 21:54:58 INFO  BatchProcessorHelper:78 - pdf Files are deleted from in folder
+2021-02-03 00:28:10 INFO  BatchProcessorHelper:78 - pdf Files are deleted from in folder
+2021-02-03 00:29:51 INFO  AppUtil:80 - Xml file220019915.xml is invalid 
+org.xml.sax.SAXParseException; systemId: file:/Users/jarvis/Downloads/batch-processor/data/in/220019915.xml; lineNumber: 9; columnNumber: 16; XML document structures must start and end within the same entity.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:261)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isXMLFileValid(AppUtil.java:78)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:41)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
+2021-02-03 00:29:51 ERROR FileProcessorBatchServiceImpl:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFileSourceToTarget(FileProcessorBatchServiceImpl.java:52)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:88)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:72)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:15)
+2021-02-03 00:29:51 INFO  BatchProcessorHelper:78 - pdf Files are deleted from in folder
+2021-02-03 12:18:57 INFO  AppUtil:80 - Xml file220019915.xml is invalid 
+org.xml.sax.SAXParseException; systemId: file:/Users/jarvis/Downloads/batch-processor/data/in/220019915.xml; lineNumber: 9; columnNumber: 16; XML document structures must start and end within the same entity.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:261)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isXMLFileValid(AppUtil.java:78)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:41)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 12:18:57 ERROR FileProcessorBatchServiceImpl:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFileSourceToTarget(FileProcessorBatchServiceImpl.java:52)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:88)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:72)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 12:18:57 INFO  BatchProcessorHelper:78 - pdf Files are deleted from in folder
+2021-02-03 18:09:42 ERROR FileProcessorBatchServiceImpl:33 - Exception while moving file: data/out/42/8842/90072657.pdf
+java.nio.file.FileAlreadyExistsException: data/out/42/8842/90072657.pdf
+	at java.base/sun.nio.fs.UnixCopyFile.copy(UnixCopyFile.java:571)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.copy(UnixFileSystemProvider.java:258)
+	at java.base/java.nio.file.Files.copy(Files.java:1299)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.copyFileFromSourceToTarget(FileProcessorBatchServiceImpl.java:31)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:77)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:49)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 18:09:42 ERROR FileProcessorBatchServiceImpl:33 - Exception while moving file: data/out/20/11520/90072657.pdf
+java.nio.file.FileAlreadyExistsException: data/out/20/11520/90072657.pdf
+	at java.base/sun.nio.fs.UnixCopyFile.copy(UnixCopyFile.java:571)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.copy(UnixFileSystemProvider.java:258)
+	at java.base/java.nio.file.Files.copy(Files.java:1299)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.copyFileFromSourceToTarget(FileProcessorBatchServiceImpl.java:31)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:77)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:49)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 18:09:42 ERROR FileProcessorBatchServiceImpl:33 - Exception while moving file: data/out/42/8842/90072658.pdf
+java.nio.file.FileAlreadyExistsException: data/out/42/8842/90072658.pdf
+	at java.base/sun.nio.fs.UnixCopyFile.copy(UnixCopyFile.java:571)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.copy(UnixFileSystemProvider.java:258)
+	at java.base/java.nio.file.Files.copy(Files.java:1299)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.copyFileFromSourceToTarget(FileProcessorBatchServiceImpl.java:31)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:77)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:49)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 18:09:42 ERROR FileProcessorBatchServiceImpl:33 - Exception while moving file: data/error/94/142994/90072659.pdf
+java.nio.file.FileAlreadyExistsException: data/error/94/142994/90072659.pdf
+	at java.base/sun.nio.fs.UnixCopyFile.copy(UnixCopyFile.java:571)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.copy(UnixFileSystemProvider.java:258)
+	at java.base/java.nio.file.Files.copy(Files.java:1299)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.copyFileFromSourceToTarget(FileProcessorBatchServiceImpl.java:31)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:77)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 18:09:42 ERROR FileProcessorBatchServiceImpl:33 - Exception while moving file: data/out/51/51/90072610.pdf
+java.nio.file.FileAlreadyExistsException: data/out/51/51/90072610.pdf
+	at java.base/sun.nio.fs.UnixCopyFile.copy(UnixCopyFile.java:571)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.copy(UnixFileSystemProvider.java:258)
+	at java.base/java.nio.file.Files.copy(Files.java:1299)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.copyFileFromSourceToTarget(FileProcessorBatchServiceImpl.java:31)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:77)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:49)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 18:09:42 ERROR FileProcessorBatchServiceImpl:54 - Exception while moving file: 
+java.nio.file.FileAlreadyExistsException: data/archive/90072701.xml
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:448)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFileSourceToTarget(FileProcessorBatchServiceImpl.java:52)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:88)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:73)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 18:09:42 ERROR FileProcessorBatchServiceImpl:33 - Exception while moving file: data/out/69/753469/110011003.pdf
+java.nio.file.FileAlreadyExistsException: data/out/69/753469/110011003.pdf
+	at java.base/sun.nio.fs.UnixCopyFile.copy(UnixCopyFile.java:571)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.copy(UnixFileSystemProvider.java:258)
+	at java.base/java.nio.file.Files.copy(Files.java:1299)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.copyFileFromSourceToTarget(FileProcessorBatchServiceImpl.java:31)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:77)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:49)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 18:09:42 ERROR FileProcessorBatchServiceImpl:33 - Exception while moving file: data/out/20/11520/110011004.pdf
+java.nio.file.FileAlreadyExistsException: data/out/20/11520/110011004.pdf
+	at java.base/sun.nio.fs.UnixCopyFile.copy(UnixCopyFile.java:571)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.copy(UnixFileSystemProvider.java:258)
+	at java.base/java.nio.file.Files.copy(Files.java:1299)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.copyFileFromSourceToTarget(FileProcessorBatchServiceImpl.java:31)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:77)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:49)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 18:09:42 ERROR FileProcessorBatchServiceImpl:33 - Exception while moving file: data/out/47/92247/110011005.pdf
+java.nio.file.FileAlreadyExistsException: data/out/47/92247/110011005.pdf
+	at java.base/sun.nio.fs.UnixCopyFile.copy(UnixCopyFile.java:571)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.copy(UnixFileSystemProvider.java:258)
+	at java.base/java.nio.file.Files.copy(Files.java:1299)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.copyFileFromSourceToTarget(FileProcessorBatchServiceImpl.java:31)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:77)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:49)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 18:09:42 ERROR FileProcessorBatchServiceImpl:33 - Exception while moving file: data/out/78/91178/110011006.pdf
+java.nio.file.FileAlreadyExistsException: data/out/78/91178/110011006.pdf
+	at java.base/sun.nio.fs.UnixCopyFile.copy(UnixCopyFile.java:571)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.copy(UnixFileSystemProvider.java:258)
+	at java.base/java.nio.file.Files.copy(Files.java:1299)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.copyFileFromSourceToTarget(FileProcessorBatchServiceImpl.java:31)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:77)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:49)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 18:09:42 ERROR FileProcessorBatchServiceImpl:33 - Exception while moving file: data/out/9/9/110011009.pdf
+java.nio.file.FileAlreadyExistsException: data/out/9/9/110011009.pdf
+	at java.base/sun.nio.fs.UnixCopyFile.copy(UnixCopyFile.java:571)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.copy(UnixFileSystemProvider.java:258)
+	at java.base/java.nio.file.Files.copy(Files.java:1299)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.copyFileFromSourceToTarget(FileProcessorBatchServiceImpl.java:31)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:77)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:49)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 18:09:42 ERROR FileProcessorBatchServiceImpl:33 - Exception while moving file: data/out/67/11267/110011014.pdf
+java.nio.file.FileAlreadyExistsException: data/out/67/11267/110011014.pdf
+	at java.base/sun.nio.fs.UnixCopyFile.copy(UnixCopyFile.java:571)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.copy(UnixFileSystemProvider.java:258)
+	at java.base/java.nio.file.Files.copy(Files.java:1299)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.copyFileFromSourceToTarget(FileProcessorBatchServiceImpl.java:31)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:77)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:49)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 18:09:42 ERROR FileProcessorBatchServiceImpl:33 - Exception while moving file: data/out/51/51/110011015.pdf
+java.nio.file.FileAlreadyExistsException: data/out/51/51/110011015.pdf
+	at java.base/sun.nio.fs.UnixCopyFile.copy(UnixCopyFile.java:571)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.copy(UnixFileSystemProvider.java:258)
+	at java.base/java.nio.file.Files.copy(Files.java:1299)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.copyFileFromSourceToTarget(FileProcessorBatchServiceImpl.java:31)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:77)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:49)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 18:09:42 ERROR FileProcessorBatchServiceImpl:33 - Exception while moving file: data/out/12/67112/110011015.pdf
+java.nio.file.FileAlreadyExistsException: data/out/12/67112/110011015.pdf
+	at java.base/sun.nio.fs.UnixCopyFile.copy(UnixCopyFile.java:571)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.copy(UnixFileSystemProvider.java:258)
+	at java.base/java.nio.file.Files.copy(Files.java:1299)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.copyFileFromSourceToTarget(FileProcessorBatchServiceImpl.java:31)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:77)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:49)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 18:09:42 ERROR FileProcessorBatchServiceImpl:33 - Exception while moving file: data/out/34/810034/110011015.pdf
+java.nio.file.FileAlreadyExistsException: data/out/34/810034/110011015.pdf
+	at java.base/sun.nio.fs.UnixCopyFile.copy(UnixCopyFile.java:571)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.copy(UnixFileSystemProvider.java:258)
+	at java.base/java.nio.file.Files.copy(Files.java:1299)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.copyFileFromSourceToTarget(FileProcessorBatchServiceImpl.java:31)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:77)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:49)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 18:09:42 ERROR FileProcessorBatchServiceImpl:54 - Exception while moving file: 
+java.nio.file.FileAlreadyExistsException: data/archive/110021015.xml
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:448)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFileSourceToTarget(FileProcessorBatchServiceImpl.java:52)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:88)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:73)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 18:09:42 INFO  AppUtil:74 - Xml file220019915.xml is invalid 
+org.xml.sax.SAXParseException; systemId: file:/Users/jarvis/Downloads/batch-processor/data/in/220019915.xml; lineNumber: 9; columnNumber: 16; XML document structures must start and end within the same entity.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:261)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isXMLFileValid(AppUtil.java:72)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:42)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 18:09:42 ERROR FileProcessorBatchServiceImpl:54 - Exception while moving file: 
+java.nio.file.FileAlreadyExistsException: data/error/220019915.xml
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:448)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFileSourceToTarget(FileProcessorBatchServiceImpl.java:52)
+	at com.finago.interview.task.batch.FileProcessorBatchServiceImpl.moveFile(FileProcessorBatchServiceImpl.java:88)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:69)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 18:09:42 INFO  BatchProcessorHelper:79 - pdf Files are deleted from in folder
+2021-02-03 22:27:42 INFO  BatchProcessorHelper:80 - pdf Files are deleted from in folder
+2021-02-03 22:29:23 ERROR AppUtil:100 - Exception: s4s-elt-character: Non-whitespace characters are not allowed in schema elements other than 'xs:appinfo' and 'xs:documentation'. Saw '8842'.
+2021-02-03 22:29:23 ERROR BatchServiceImpl:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/90072701.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchServiceImpl.moveFileSourceToTarget(BatchServiceImpl.java:52)
+	at com.finago.interview.task.batch.BatchServiceImpl.moveFile(BatchServiceImpl.java:88)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:74)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 22:29:23 ERROR AppUtil:100 - Exception: s4s-elt-character: Non-whitespace characters are not allowed in schema elements other than 'xs:appinfo' and 'xs:documentation'. Saw '753469'.
+2021-02-03 22:29:23 ERROR BatchServiceImpl:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/110021015.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchServiceImpl.moveFileSourceToTarget(BatchServiceImpl.java:52)
+	at com.finago.interview.task.batch.BatchServiceImpl.moveFile(BatchServiceImpl.java:88)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:74)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 22:29:23 ERROR AppUtil:100 - Exception: s4s-elt-character: Non-whitespace characters are not allowed in schema elements other than 'xs:appinfo' and 'xs:documentation'. Saw '8842'.
+2021-02-03 22:29:23 ERROR BatchServiceImpl:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchServiceImpl.moveFileSourceToTarget(BatchServiceImpl.java:52)
+	at com.finago.interview.task.batch.BatchServiceImpl.moveFile(BatchServiceImpl.java:88)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:74)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 22:29:23 INFO  BatchProcessorHelper:80 - pdf Files are deleted from in folder
+2021-02-03 22:32:12 ERROR AppUtil:100 - Exception: s4s-elt-character: Non-whitespace characters are not allowed in schema elements other than 'xs:appinfo' and 'xs:documentation'. Saw '8842'.
+2021-02-03 22:32:12 ERROR BatchServiceImpl:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/90072701.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchServiceImpl.moveFileSourceToTarget(BatchServiceImpl.java:52)
+	at com.finago.interview.task.batch.BatchServiceImpl.moveFile(BatchServiceImpl.java:88)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:74)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 22:32:12 ERROR AppUtil:100 - Exception: s4s-elt-character: Non-whitespace characters are not allowed in schema elements other than 'xs:appinfo' and 'xs:documentation'. Saw '753469'.
+2021-02-03 22:32:12 ERROR BatchServiceImpl:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/110021015.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchServiceImpl.moveFileSourceToTarget(BatchServiceImpl.java:52)
+	at com.finago.interview.task.batch.BatchServiceImpl.moveFile(BatchServiceImpl.java:88)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:74)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 22:32:12 ERROR AppUtil:100 - Exception: s4s-elt-character: Non-whitespace characters are not allowed in schema elements other than 'xs:appinfo' and 'xs:documentation'. Saw '8842'.
+2021-02-03 22:32:12 ERROR BatchServiceImpl:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchServiceImpl.moveFileSourceToTarget(BatchServiceImpl.java:52)
+	at com.finago.interview.task.batch.BatchServiceImpl.moveFile(BatchServiceImpl.java:88)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:74)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 22:32:12 INFO  BatchProcessorHelper:80 - pdf Files are deleted from in folder
+2021-02-03 22:40:20 INFO  AppUtil:83 - Xml file220019915.xml is invalid 
+org.xml.sax.SAXParseException; systemId: file:/Users/jarvis/Downloads/batch-processor/data/in/220019915.xml; lineNumber: 9; columnNumber: 16; XML document structures must start and end within the same entity.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:261)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isValidXMLSchema(AppUtil.java:81)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:42)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 22:40:20 ERROR BatchServiceImpl:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchServiceImpl.moveFileSourceToTarget(BatchServiceImpl.java:52)
+	at com.finago.interview.task.batch.BatchServiceImpl.moveFile(BatchServiceImpl.java:88)
+	at com.finago.interview.task.batch.BatchProcessorHelper.doWork(BatchProcessorHelper.java:74)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-03 22:40:20 INFO  BatchProcessorHelper:80 - pdf Files are deleted from in folder
+2021-02-04 18:00:48 INFO  AppUtil:80 - Xml filedata/in/90072701.xml is invalid 
+java.io.FileNotFoundException: /Users/jarvis/Downloads/batch-processor/data/in/data/in/90072701.xml (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:212)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:154)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:109)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:184)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:652)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:860)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isValidXMLSchema(AppUtil.java:78)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:100)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:41)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:00:48 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/data/in/90072701.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:125)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:41)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:00:48 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/data/in/90072701.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:129)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:41)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:00:48 INFO  AppUtil:80 - Xml filedata/in/110021015.xml is invalid 
+java.io.FileNotFoundException: /Users/jarvis/Downloads/batch-processor/data/in/data/in/110021015.xml (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:212)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:154)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:109)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:184)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:652)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:860)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isValidXMLSchema(AppUtil.java:78)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:100)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:41)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:00:48 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/data/in/110021015.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:125)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:41)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:00:48 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/data/in/110021015.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:129)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:41)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:00:48 INFO  AppUtil:80 - Xml filedata/in/220019915.xml is invalid 
+java.io.FileNotFoundException: /Users/jarvis/Downloads/batch-processor/data/in/data/in/220019915.xml (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:212)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:154)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:109)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:184)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:652)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:860)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isValidXMLSchema(AppUtil.java:78)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:100)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:41)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:00:48 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:125)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:41)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:00:48 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:129)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:41)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:05:54 INFO  AppUtil:80 - Xml filedata/in/90072701.xml is invalid 
+java.io.FileNotFoundException: /Users/jarvis/Downloads/batch-processor/data/in/data/in/90072701.xml (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:212)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:154)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:109)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:184)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:652)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:860)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isValidXMLSchema(AppUtil.java:78)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:100)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:41)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:05:54 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/data/in/90072701.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:125)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:41)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:05:54 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/data/in/90072701.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:129)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:41)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:05:54 INFO  AppUtil:80 - Xml filedata/in/110021015.xml is invalid 
+java.io.FileNotFoundException: /Users/jarvis/Downloads/batch-processor/data/in/data/in/110021015.xml (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:212)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:154)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:109)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:184)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:652)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:860)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isValidXMLSchema(AppUtil.java:78)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:100)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:41)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:05:54 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/data/in/110021015.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:125)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:41)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:05:54 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/data/in/110021015.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:129)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:41)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:05:54 INFO  AppUtil:80 - Xml filedata/in/220019915.xml is invalid 
+java.io.FileNotFoundException: /Users/jarvis/Downloads/batch-processor/data/in/data/in/220019915.xml (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:212)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:154)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:109)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:184)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:652)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:860)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isValidXMLSchema(AppUtil.java:78)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:100)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:41)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:05:54 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:125)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:41)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:05:54 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:129)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:41)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:10:13 INFO  AppUtil:80 - Xml file220019915.xml is invalid 
+org.xml.sax.SAXParseException; systemId: file:/Users/jarvis/Downloads/batch-processor/data/in/220019915.xml; lineNumber: 9; columnNumber: 16; XML document structures must start and end within the same entity.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:261)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isValidXMLSchema(AppUtil.java:78)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:102)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:43)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:57)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:10:13 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:131)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:43)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:57)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:13:32 INFO  AppUtil:80 - Xml file220019915.xml is invalid 
+org.xml.sax.SAXParseException; systemId: file:/Users/jarvis/Downloads/batch-processor/data/in/220019915.xml; lineNumber: 9; columnNumber: 16; XML document structures must start and end within the same entity.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:261)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isValidXMLSchema(AppUtil.java:78)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:101)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:42)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:56)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:13:32 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:130)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:42)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:56)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:14:13 INFO  AppUtil:80 - Xml file220019915.xml is invalid 
+org.xml.sax.SAXParseException; systemId: file:/Users/jarvis/Downloads/batch-processor/data/in/220019915.xml; lineNumber: 9; columnNumber: 16; XML document structures must start and end within the same entity.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:261)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isValidXMLSchema(AppUtil.java:78)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:101)
+	at com.finago.interview.task.batch.BatchServiceImpl.doWork(BatchServiceImpl.java:79)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:57)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:14:13 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:130)
+	at com.finago.interview.task.batch.BatchServiceImpl.doWork(BatchServiceImpl.java:79)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:57)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:14:13 INFO  BatchServiceImpl:84 - pdf Files are deleted from in folder
+2021-02-04 18:22:58 ERROR AppUtil:97 - Exception: schema_reference.4: Failed to read schema document 'file:/recipient_data_schema.xsd', because 1) could not find the document; 2) the document could not be read; 3) the root element of the document is not <xsd:schema>.
+2021-02-04 18:22:58 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/90072701.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:130)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:42)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:56)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:22:58 ERROR AppUtil:97 - Exception: schema_reference.4: Failed to read schema document 'file:/recipient_data_schema.xsd', because 1) could not find the document; 2) the document could not be read; 3) the root element of the document is not <xsd:schema>.
+2021-02-04 18:22:58 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/110021015.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:130)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:42)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:56)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:22:58 ERROR AppUtil:97 - Exception: schema_reference.4: Failed to read schema document 'file:/recipient_data_schema.xsd', because 1) could not find the document; 2) the document could not be read; 3) the root element of the document is not <xsd:schema>.
+2021-02-04 18:22:58 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:130)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:42)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:56)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:24:28 ERROR AppUtil:97 - Exception: schema_reference.4: Failed to read schema document 'file:/recipient_data_schema.xsd', because 1) could not find the document; 2) the document could not be read; 3) the root element of the document is not <xsd:schema>.
+2021-02-04 18:24:28 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.FileAlreadyExistsException: data/error/90072701.xml
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:448)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:126)
+	at com.finago.interview.task.batch.BatchServiceImpl.doWork(BatchServiceImpl.java:79)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:57)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:24:28 ERROR AppUtil:97 - Exception: schema_reference.4: Failed to read schema document 'file:/recipient_data_schema.xsd', because 1) could not find the document; 2) the document could not be read; 3) the root element of the document is not <xsd:schema>.
+2021-02-04 18:24:28 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.FileAlreadyExistsException: data/error/110021015.xml
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:448)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:126)
+	at com.finago.interview.task.batch.BatchServiceImpl.doWork(BatchServiceImpl.java:79)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:57)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:24:28 ERROR AppUtil:97 - Exception: schema_reference.4: Failed to read schema document 'file:/recipient_data_schema.xsd', because 1) could not find the document; 2) the document could not be read; 3) the root element of the document is not <xsd:schema>.
+2021-02-04 18:24:28 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.FileAlreadyExistsException: data/error/220019915.xml
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:448)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:126)
+	at com.finago.interview.task.batch.BatchServiceImpl.doWork(BatchServiceImpl.java:79)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:57)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:24:28 INFO  BatchServiceImpl:84 - pdf Files are deleted from in folder
+2021-02-04 18:24:49 ERROR AppUtil:97 - Exception: schema_reference.4: Failed to read schema document 'file:/recipient_data_schema.xsd', because 1) could not find the document; 2) the document could not be read; 3) the root element of the document is not <xsd:schema>.
+2021-02-04 18:24:49 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.FileAlreadyExistsException: data/error/90072701.xml
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:448)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:126)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:42)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:56)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:24:49 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.FileAlreadyExistsException: data/archive/90072701.xml
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:448)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:130)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:42)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:56)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:24:49 ERROR AppUtil:97 - Exception: schema_reference.4: Failed to read schema document 'file:/recipient_data_schema.xsd', because 1) could not find the document; 2) the document could not be read; 3) the root element of the document is not <xsd:schema>.
+2021-02-04 18:24:49 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.FileAlreadyExistsException: data/error/110021015.xml
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:448)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:126)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:42)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:56)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:24:49 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.FileAlreadyExistsException: data/archive/110021015.xml
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:448)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:130)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:42)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:56)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:24:49 ERROR AppUtil:97 - Exception: schema_reference.4: Failed to read schema document 'file:/recipient_data_schema.xsd', because 1) could not find the document; 2) the document could not be read; 3) the root element of the document is not <xsd:schema>.
+2021-02-04 18:24:49 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.FileAlreadyExistsException: data/error/220019915.xml
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:448)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:126)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:42)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:56)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:24:49 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.FileAlreadyExistsException: data/archive/220019915.xml
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:448)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:130)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:42)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:56)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:30:09 ERROR AppUtil:97 - Exception: /Users/jarvis/Downloads/batch-processor/data/in/90072701.xml (No such file or directory)
+2021-02-04 18:30:51 ERROR AppUtil:97 - Exception: schema_reference.4: Failed to read schema document 'file:/batch-processor/recipient_data_schema.xsd', because 1) could not find the document; 2) the document could not be read; 3) the root element of the document is not <xsd:schema>.
+2021-02-04 18:36:57 INFO  AppUtil:80 - Xml file220019915.xml is invalid 
+org.xml.sax.SAXParseException; systemId: file:/Users/jarvis/Downloads/batch-processor/data/in/220019915.xml; lineNumber: 9; columnNumber: 16; XML document structures must start and end within the same entity.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:261)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isValidXML(AppUtil.java:78)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:99)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:40)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:54)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:36:57 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:128)
+	at com.finago.interview.task.batch.BatchServiceImpl.preProcess(BatchServiceImpl.java:40)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:54)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:37:47 INFO  AppUtil:80 - Xml file220019915 6.36.36 PM.xml is invalid 
+org.xml.sax.SAXParseException; systemId: file:/Users/jarvis/Downloads/batch-processor/data/in/220019915%206.36.36%20PM.xml; lineNumber: 9; columnNumber: 16; XML document structures must start and end within the same entity.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:261)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isValidXML(AppUtil.java:78)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:99)
+	at com.finago.interview.task.batch.BatchServiceImpl.doWork(BatchServiceImpl.java:77)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:37:47 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/220019915 6.36.36 PM.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:128)
+	at com.finago.interview.task.batch.BatchServiceImpl.doWork(BatchServiceImpl.java:77)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:37:47 INFO  BatchServiceImpl:82 - pdf Files are deleted from in folder
+2021-02-04 18:37:57 INFO  BatchServiceImpl:82 - pdf Files are deleted from in folder
+2021-02-04 18:38:27 INFO  AppUtil:80 - Xml file220019915 6.36.36 PM.xml is invalid 
+org.xml.sax.SAXParseException; systemId: file:/Users/jarvis/Downloads/batch-processor/data/in/220019915%206.36.36%20PM.xml; lineNumber: 9; columnNumber: 16; XML document structures must start and end within the same entity.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:261)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isValidXML(AppUtil.java:78)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:99)
+	at com.finago.interview.task.batch.BatchServiceImpl.doWork(BatchServiceImpl.java:77)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:38:27 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/220019915 6.36.36 PM.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:128)
+	at com.finago.interview.task.batch.BatchServiceImpl.doWork(BatchServiceImpl.java:77)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:38:27 INFO  BatchServiceImpl:82 - pdf Files are deleted from in folder
+2021-02-04 18:39:07 INFO  AppUtil:80 - Xml file220019915.xml is invalid 
+org.xml.sax.SAXParseException; systemId: file:/Users/jarvis/Downloads/batch-processor/data/in/220019915.xml; lineNumber: 9; columnNumber: 16; XML document structures must start and end within the same entity.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:261)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206)
+	at com.finago.interview.task.util.AppUtil.isValidXML(AppUtil.java:78)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:99)
+	at com.finago.interview.task.batch.BatchServiceImpl.doWork(BatchServiceImpl.java:77)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:39:07 ERROR BatchUtil:54 - Exception while moving file: 
+java.nio.file.NoSuchFileException: data/in/220019915.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:428)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:267)
+	at java.base/java.nio.file.Files.move(Files.java:1426)
+	at com.finago.interview.task.batch.BatchUtil.moveFileSourceToTarget(BatchUtil.java:52)
+	at com.finago.interview.task.batch.BatchUtil.moveFile(BatchUtil.java:87)
+	at com.finago.interview.task.batch.BatchServiceImpl.doOneUnitWork(BatchServiceImpl.java:128)
+	at com.finago.interview.task.batch.BatchServiceImpl.doWork(BatchServiceImpl.java:77)
+	at com.finago.interview.task.batch.BatchServiceImpl.process(BatchServiceImpl.java:55)
+	at com.finago.interview.task.BatchProcessor.main(BatchProcessor.java:16)
+2021-02-04 18:39:07 INFO  BatchServiceImpl:82 - pdf Files are deleted from in folder
