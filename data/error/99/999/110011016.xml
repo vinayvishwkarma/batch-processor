@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<receiver>
+    <receiver_id>999</receiver_id>
+    <first_name>Guybrush</first_name>
+    <last_name>Threepwood</last_name>
+    <file>110011016.pdf</file>
+    <file_md5>f61f43ea9db3d11b3037af8d749b5127</file_md5>
+</receiver>

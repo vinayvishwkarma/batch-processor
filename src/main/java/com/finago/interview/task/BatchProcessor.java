@@ -1,12 +1,14 @@
 package com.finago.interview.task;
 
-/**
- * A simple main method as an example.
- */
+import com.finago.interview.task.batch.BatchServiceImpl;
+
 public class BatchProcessor {
 
-    public static void main(String[] args) {
-        System.out.println("*beep boop* ...processing data... *beep boop*");
-    }
+	public static void main(String[] args) {
+		System.out.println("*beep boop* ...processing data... *beep boop*");
+
+		new BatchServiceImpl().process();
+
+	}
 
 }
