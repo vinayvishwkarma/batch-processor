@@ -1,0 +1,14 @@
+#Sat May 03 17:32:39 EEST 2025
+/Users/jarvis/Downloads/batch-processor/src/main/java/com/finago/interview/task/BatchProcessor.java=1746264876751
+/Users/jarvis/Downloads/batch-processor/src/main/java/com/finago/interview/task/exception/FileNotFoundProcessingException.java=1746269168822
+/Users/jarvis/Downloads/batch-processor/src/main/java/com/finago/interview/task/exception/ProcessingException.java=1746255429892
+/Users/jarvis/Downloads/batch-processor/src/main/java/com/finago/interview/task/model/Receiver.java=1746258892672
+/Users/jarvis/Downloads/batch-processor/src/main/java/com/finago/interview/task/model/ReceiverWrapper.java=1746268835743
+/Users/jarvis/Downloads/batch-processor/src/main/java/com/finago/interview/task/model/Receivers.java=1746268130728
+/Users/jarvis/Downloads/batch-processor/src/main/java/com/finago/interview/task/processor/FileProcessor.java=1746265001750
+/Users/jarvis/Downloads/batch-processor/src/main/java/com/finago/interview/task/processor/ReceiverHandler.java=1746268928567
+/Users/jarvis/Downloads/batch-processor/src/main/java/com/finago/interview/task/processor/XmlParser.java=1746264982522
+/Users/jarvis/Downloads/batch-processor/src/main/java/com/finago/interview/task/processor/XmlValidator.java=1746265052735
+/Users/jarvis/Downloads/batch-processor/src/main/java/com/finago/interview/task/util/ChecksumUtils.java=1746256689891
+/Users/jarvis/Downloads/batch-processor/src/main/java/com/finago/interview/task/watcher/DirectoryWatcher.java=1746268965043
+configuration*?=B2D1F6CFC2FD9AA49EAEFC964ED8B6DEA36B5F2A

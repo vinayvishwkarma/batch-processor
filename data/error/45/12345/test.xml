@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<receivers>
+    <receiver>
+        <receiver_id>12345</receiver_id>
+        <file>test.pdf</file>
+        <file_md5>invalidMd5</file_md5>
+    </receiver>
+</receivers>

@@ -1,0 +1,11 @@
+com/finago/interview/task/exception/ProcessingException.class
+com/finago/interview/task/model/ReceiverWrapper.class
+com/finago/interview/task/model/Receiver.class
+com/finago/interview/task/watcher/DirectoryWatcher.class
+com/finago/interview/task/processor/XmlValidator.class
+com/finago/interview/task/processor/FileProcessor.class
+com/finago/interview/task/processor/XmlParser.class
+com/finago/interview/task/BatchProcessor.class
+com/finago/interview/task/model/Receivers.class
+com/finago/interview/task/util/ChecksumUtils.class
+com/finago/interview/task/processor/ReceiverHandler.class

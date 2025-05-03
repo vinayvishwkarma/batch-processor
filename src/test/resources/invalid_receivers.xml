@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<receivers>
+  <receiver>
+    <receiverId>12345</receiverId>
+    <file>test.pdf</file>
+    <fileMd5>invalid_md5_hash</fileMd5>

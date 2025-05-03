@@ -1,0 +1,12 @@
+/Users/jarvis/Downloads/batch-processor/src/main/java/com/finago/interview/task/model/Receiver.java
+/Users/jarvis/Downloads/batch-processor/src/main/java/com/finago/interview/task/processor/XmlParser.java
+/Users/jarvis/Downloads/batch-processor/src/main/java/com/finago/interview/task/watcher/DirectoryWatcher.java
+/Users/jarvis/Downloads/batch-processor/src/main/java/com/finago/interview/task/model/Receivers.java
+/Users/jarvis/Downloads/batch-processor/src/main/java/com/finago/interview/task/exception/ProcessingException.java
+/Users/jarvis/Downloads/batch-processor/src/main/java/com/finago/interview/task/processor/XmlValidator.java
+/Users/jarvis/Downloads/batch-processor/src/main/java/com/finago/interview/task/BatchProcessor.java
+/Users/jarvis/Downloads/batch-processor/src/main/java/com/finago/interview/task/util/ChecksumUtils.java
+/Users/jarvis/Downloads/batch-processor/src/main/java/com/finago/interview/task/processor/FileProcessor.java
+/Users/jarvis/Downloads/batch-processor/src/main/java/com/finago/interview/task/model/ReceiverWrapper.java
+/Users/jarvis/Downloads/batch-processor/src/main/java/com/finago/interview/task/exception/FileNotFoundProcessingException.java
+/Users/jarvis/Downloads/batch-processor/src/main/java/com/finago/interview/task/processor/ReceiverHandler.java

@@ -1,0 +1,5 @@
+com/finago/interview/task/processor/FileProcessorTest.class
+com/finago/interview/task/BatchProcessorTest.class
+com/finago/interview/task/util/ChecksumUtilsTest.class
+com/finago/interview/task/helper/UnmockedMethodAnswer.class
+com/finago/interview/task/helper/TestHelper.class

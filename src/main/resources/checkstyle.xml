@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+  "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+  "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+  <!-- Basic TreeWalker checks -->
+  <module name="TreeWalker">
+    <!-- Disallow unused imports -->
+    <module name="UnusedImports"/>
+    <!-- Disallow unused local variables -->
+    <module name="UnusedLocalVariable"/>
+    <!-- Disallow unused parameters -->
+    <module name="ParameterName"/>
+    <!-- Disallow empty blocks -->
+    <module name="EmptyBlock"/>
+    <!-- Require final on method parameters -->
+    <module name="FinalParameters"/>
+    <module name="AvoidStarImport"/>
+  </module>
+  <!-- Global file-level checks -->
+  <!-- Forbid wildcard imports -->
+  <!-- Enforce file must end with a newline -->
+  <module name="NewlineAtEndOfFile"/>
+</module>
